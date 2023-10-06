@@ -8,9 +8,9 @@ import { Assignment } from './assignment.model';
 })
 export class AssignmentsComponent implements OnInit {
   titre = "Mon application sur les Assignments";
-  nom = "";
-  dateDeRendu = null;
-  rendu = false;
+  dateDeRendu!: Date;
+  ajoutActive = false;
+  nomDevoir!: string;
   constructor() { }
 
   assignments:Assignment[] = [
@@ -30,8 +30,16 @@ export class AssignmentsComponent implements OnInit {
       rendu: true,
     },
   ];
+
+  onSubmit(event:any) {
+    console.log(event);
+  }
   ngOnInit(): void {
-    
+    setTimeout(
+      () => {
+        this.ajoutActive = true;
+      }, 2000
+    );
   }
 
 }
