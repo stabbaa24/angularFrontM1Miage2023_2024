@@ -11,6 +11,9 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSelectModule} from '@angular/material/select';
 
 import { AssignmentsComponent } from './assignments/assignments.component';
 import { RenduDirective } from './shared/rendu.directive';
@@ -32,7 +35,10 @@ import {FormsModule} from "@angular/forms";
     BrowserAnimationsModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    FormsModule
+    FormsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

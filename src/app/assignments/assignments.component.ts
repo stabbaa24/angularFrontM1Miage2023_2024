@@ -6,6 +6,7 @@ import { Assignment } from './assignment.model';
   templateUrl: './assignments.component.html',
   styleUrls: ['./assignments.component.css']
 })
+
 export class AssignmentsComponent implements OnInit {
   titre = "Mon application sur les Assignments";
   dateDeRendu!: Date;
@@ -31,9 +32,16 @@ export class AssignmentsComponent implements OnInit {
     },
   ];
 
-  onSubmit(event:any) {
+  onSubmit() {
     console.log(event);
+    const newAssignment = new Assignment();
+    newAssignment.nom = this.nomDevoir;
+    newAssignment.dateDeRendu = this.dateDeRendu;
+    newAssignment.rendu = false;
+
+    this.assignments.push(newAssignment);
   }
+
   ngOnInit(): void {
     setTimeout(
       () => {

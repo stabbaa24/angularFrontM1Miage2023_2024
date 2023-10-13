@@ -1,3 +1,32 @@
-<h1>Hello World !</h1>
-
-<app-assignments></app-assignments>
+<mat-drawer-container class="my-sidenav">
+    <mat-drawer #drawer>I'm a drawer</mat-drawer>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button mat-raised-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+  
+        <button
+          mat-icon-button
+          class="example-icon"
+          aria-label="Example icon-button with menu icon"
+        >
+          <mat-icon>house</mat-icon>
+        </button>
+        <span>Gestion des devoirs</span>
+        <span class="example-spacer"></span>
+  
+        <button
+          mat-icon-button
+          class="example-icon favorite-icon"
+          aria-label="Example icon-button with heart icon"
+        >
+          <mat-icon>account_circle</mat-icon>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  
+    <h1>Hello World !</h1>
+  
+    <app-assignments></app-assignments>
+  </mat-drawer-container>
